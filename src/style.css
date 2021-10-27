@@ -1,0 +1,39 @@
+:not(.visible).dropdown {
+    visibility: hidden;
+}
+
+.hello {
+    color: red;
+}
+
+body {
+    height: 100vh;
+}
+
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.dropdown-button {
+    background-color: grey;
+    width: 30px;
+    height: 30px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-list {
+    position: relative;
+    top: 30px;
+    border: 1px solid black;
+    margin: 0;
+    list-style: none;
+    padding: 10px;
+    text-align: left;
+}
+
