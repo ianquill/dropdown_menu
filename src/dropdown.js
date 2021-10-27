@@ -45,40 +45,4 @@ class Dropdown {
 
 }
 
-
-// const Dropdown = (function(){
-//     const mainContainer = document.getElementById('main-container');
-//     const button = mainContainer.querySelector('.dropdown-button');
-//     const list = button.querySelector('.dropdown-list');
-//     const items = list.querySelectorAll('.dropdown-item');
-
-//     let isOpen = false;
-
-//     // initialize button event listener
-
-//     function open() {
-//         isOpen = true;
-//         items.forEach(element => {
-//             element.classList.add('visible');
-//         });
-//         list.classList.add('visible');
-//     }
-
-//     function close() {
-//         isOpen = false;
-//         items.forEach(element => {
-//             element.classList.remove('visible');
-//         });
-//         list.classList.remove('visible');
-//     }
-
-//     function clickButton() {
-//         if (isOpen) {
-//             close();
-//         } else {
-//             open();
-//         }
-//     }
-// })();
-
 export { Dropdown }; 

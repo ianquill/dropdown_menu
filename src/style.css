@@ -18,22 +18,28 @@ body {
 }
 
 .dropdown-button {
-    background-color: grey;
     width: 30px;
     height: 30px;
     
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+
+    margin: 50px;
 }
 
 .dropdown-list {
+    width: min-content;
     position: relative;
-    top: 30px;
+    /* top: 30px; */
     border: 1px solid black;
     margin: 0;
     list-style: none;
     padding: 10px;
     text-align: left;
+}
+
+.right {
+    right: 30px; 
 }
 
