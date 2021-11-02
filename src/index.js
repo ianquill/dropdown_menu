@@ -3,8 +3,9 @@ import { Dropdown } from './dropdown.js';
 
 console.log('hello world123');
 
-const dropdowns = document.querySelectorAll('.dropdown-button');
+const dropdowns = document.querySelectorAll('.dropdown-template');
 
-dropdowns.forEach(dropdown => {
-    new Dropdown(dropdown);
+dropdowns.forEach((dropdown) => {
+    const component = document.createElement('dropdown-component', dropdown);
+    document.body.appendChild(component);
 });

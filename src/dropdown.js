@@ -1,11 +1,13 @@
 import Menu from './menu.png';
 
-class Dropdown {
+class Dropdown extends HTMLElement {
     constructor(object) {
-        this.button = object;
-        this.list = this.button.querySelector('.dropdown-list');
-        this.items = this.list.querySelectorAll('.dropdown-item');
-        this.icon = object.querySelector('.menu-icon');
+        super();
+
+        this.button = object.querySelector('input');
+        this.list = this.button.querySelector('dropdown-component');
+        this.items = this.list.querySelectorAll('li');
+        this.icon = object.querySelector('img');
         
         this.isOpen = false;
 
@@ -44,5 +46,7 @@ class Dropdown {
     }
 
 }
+
+customElements.define('dropdown-component', Dropdown, {extends: 'ul'});
 
 export { Dropdown }; 

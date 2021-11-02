@@ -6,23 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="main-container">
-        <div class="dropdown dropdown-button visible">
+    <template class="dropdown-template">
+        <input type="button" class="dropdown dropdown-button visible">
             <img class="menu-icon" src="">
-            <ul class="dropdown dropdown-list">
+            <dropdown-component class="dropdown dropdown-list">
                 <li class="dropdown dropdown-item">Home</li>
                 <li class="dropdown dropdown-item">Menu</li>
                 <li class="dropdown dropdown-item">Hours</li>
                 <li class="dropdown dropdown-item">Cotact</li>
-            </ul>
-        </div>
-        <div class="dropdown dropdown-button visible">
+            </dropdown-component>
+        </input>
+    </template>
+    <template class="dropdown-template">
+        <input type="button" class="dropdown dropdown-button visible">
             <img class="menu-icon" src="">
-            <ul class="dropdown dropdown-list right">
+            <dropdown-component class="dropdown dropdown-list right">
                 <li class="dropdown dropdown-item">Hello</li>
                 <li class="dropdown dropdown-item">Again</li>
-            </ul>
-        </div>
+            </dropdown-component>
+        </input>
+    </template>
+    <div id="main-container">
     </div>
     
 </body>
