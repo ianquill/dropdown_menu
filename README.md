@@ -7,4 +7,4 @@ refactor - make more modular
 * add style changes into javascript, not css
 * change to custom element
 * template element for initial html
-*
+* add mode select for hover vs click

@@ -6,26 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    <template class="dropdown-template">
-        <input type="button" class="dropdown dropdown-button visible">
-            <img class="menu-icon" src="">
-            <dropdown-component class="dropdown dropdown-list">
-                <li class="dropdown dropdown-item">Home</li>
-                <li class="dropdown dropdown-item">Menu</li>
-                <li class="dropdown dropdown-item">Hours</li>
-                <li class="dropdown dropdown-item">Cotact</li>
-            </dropdown-component>
-        </input>
-    </template>
-    <template class="dropdown-template">
-        <input type="button" class="dropdown dropdown-button visible">
-            <img class="menu-icon" src="">
-            <dropdown-component class="dropdown dropdown-list right">
-                <li class="dropdown dropdown-item">Hello</li>
-                <li class="dropdown dropdown-item">Again</li>
-            </dropdown-component>
-        </input>
-    </template>
+    <dropdown-component class="dropdown-component" id="temp1">
+        <input type="button" class="dropdown dropdown-button">
+        <img class="menu-icon" src="">
+        <ul class="dropdown dropdown-list">
+            <li class="dropdown dropdown-item">Home</li>
+            <li class="dropdown dropdown-item">Menu</li>
+            <li class="dropdown dropdown-item">Hours</li>
+            <li class="dropdown dropdown-item">Cotact</li>
+        </ul>
+    </dropdown-component>
+    <dropdown-component class="dropdown-component" id="temp2">
+        <input type="button" class="dropdown dropdown-button">
+        <img class="menu-icon" src="">
+        <ul class="dropdown dropdown-list right">
+            <li class="dropdown dropdown-item">Hello</li>
+            <li class="dropdown dropdown-item">Again</li>
+        </ul>
+    </dropdown-component>
     <div id="main-container">
     </div>
     
