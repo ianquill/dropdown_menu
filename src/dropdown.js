@@ -20,7 +20,16 @@ class Dropdown extends HTMLElement {
       this.clickButton();
     });
 
+    this.icon.addEventListener("click", () => {
+      console.log("clicked icon");
+    });
+
     this.icon.src = Menu;
+
+    this.newContent = document.createElement("div");
+
+    this.newContent.innerHTML = "<style> backgrond-color: red; </style>";
+    this.appendChild(this.newContent);
   }
 
   // connectedCallback() {}
