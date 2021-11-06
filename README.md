@@ -2,9 +2,9 @@
 
 refactor - make more modular
 
-- need to make adding via createElement work
+- figure out why it's chosen a width
 
-* add style changes into javascript, not css
-* change to custom element
-* template element for initial html
-* add mode select for hover vs click
+- add style changes into javascript, not css
+- change to custom element
+- template element for initial html
+- add mode select for hover vs click

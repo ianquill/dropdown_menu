@@ -1,10 +1,16 @@
 :not(.visible).dropdown {
-  visibility: hidden;
+  display: none;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 body {
   height: 100vh;
-  /* background-color: rgb(0, 67, 94); */
+  background-color: #f0a202;
+  padding: 0;
+  margin: 0;
 }
 
 #main-container {
@@ -26,18 +32,28 @@ body {
 }
 
 .dropdown-list {
-  width: min-content;
+  width: max-content;
+  height: min-content;
   position: relative;
-  /* top: 30px; */
+  top: 30px;
   border: 1px solid black;
   margin: 0;
   list-style: none;
   padding: 10px;
   text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.dropdown-item {
+  height: min-content;
 }
 
 .right {
-  right: 30px;
+  transform-origin: top right;
+  right: 45px;
 }
 
 .menu-icon {
@@ -48,8 +64,22 @@ body {
 }
 
 .dropdown-component {
-  position: relative;
   display: flex;
   width: 30px;
   height: 30px;
+}
+
+header {
+  position: relative;
+  /* width: 100%; */
+  display: flex;
+  justify-content: flex-end;
+  background-color: #f18805;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-button {
+  border: 0;
+  background-color: inherit;
 }
