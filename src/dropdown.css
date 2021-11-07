@@ -1,0 +1,37 @@
+:not(.visible).dropdown {
+  visibility: hidden;
+}
+
+.dropdown-list {
+  height: min-content;
+  position: relative;
+  border: 1px solid black;
+  margin: 0;
+  list-style: none;
+  padding: 10px;
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+}
+
+.dropdown-item {
+  height: min-content;
+}
+
+.menu-icon {
+  pointer-events: none;
+  position: absolute;
+}
+
+.dropdown-component {
+  display: flex;
+}
+
+.dropdown-button {
+  position: absolute;
+  border: 0;
+  background-color: inherit;
+}
