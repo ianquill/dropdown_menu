@@ -27,10 +27,14 @@
   flex-direction: column;
   flex-wrap: nowrap;
   flex-shrink: 0;
+
+  /* transition: transform 300ms ease-in-out;
+  transform: scaleY(0); */
 }
 
 .open {
-  animation: dropdown 200ms ease-in-out forwards;
+  /* transform: scaleY(100); */
+  animation: dropdown 200ms ease-in-out 1 none;
   /* transform-origin: top center; */
 }
 
@@ -55,4 +59,12 @@
 
 .dropdown-button:hover {
   cursor: pointer;
+}
+
+.right {
+  --width: 0;
+  --iconWidth: 0;
+
+  transform-origin: top right;
+  right: var(--width);
 }

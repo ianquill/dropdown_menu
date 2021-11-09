@@ -2,7 +2,6 @@ import Menu from "./menu.png";
 
 class Dropdown extends HTMLElement {
   constructor() {
-    
     super();
     
     this.iconWidth = '30px';
@@ -51,14 +50,20 @@ class Dropdown extends HTMLElement {
     this.style.width = this.iconWidth;
     this.style.height = this.iconHeight;
     
-    this.width = this.list.offsetWidth;
+    this.width = parseInt(this.list.offsetWidth) - parseInt(this.iconWidth.replace(/\D/g, ''));
+    console.log(this.width);
+    
+    // replacing this with css
     this.rights = this.querySelectorAll('.right');
     for (let i = 0; i < this.rights.length; i++) {
-      this.rights[i].style.transformOrigin = 'top right';
-      this.rights[i].style.transform = `translate(-${this.width}px`;
-      this.rights[i].style.left = this.iconWidth;      
+      this.rights[i].style.setProperty('--width', `${this.width}px`);
+      this.rights[i].style.setProperty('--iconWidth', this.iconWidth);
+      // this.rights[i].style.transformOrigin = 'top right';
+      // this.rights[i].style.transform = `translate(-${this.width}px`;
+      // this.rights[i].style.left = this.iconWidth;      
     }
   }
+
 
   static get observedAttributes() {
     return ['click', 'hover']
