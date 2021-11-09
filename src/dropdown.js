@@ -11,7 +11,7 @@ class Dropdown extends HTMLElement {
     console.log(this.id);
     this.button = this.querySelector("input");
     this.list = this.querySelector(".dropdown-list");
-    this.items = this.list.querySelectorAll("li");
+    this.items = this.list.querySelectorAll(".dropdown-item");
     this.icon = this.querySelector(".menu-icon");
     this.button.classList.toggle("visible");
     this.icon.classList.toggle("visible");
@@ -33,13 +33,15 @@ class Dropdown extends HTMLElement {
       this.clickButton();
     });
 
-    // additional eventListener for hover functionality
-    if (this.hover) {
-      this.interactMode = 'mouseout';
-      this.button.addEventListener(this.interactMode, () => {
-        this.clickButton();
-      })
-    }
+      // this.interactMode = 'mouseout';
+      // this.list.addEventListener(this.interactMode, () => {
+      //   this.clickButton();
+      // })
+
+      // click outside of dropdown to close it (only valid for hover right now)
+      window.addEventListener('click', () => {
+        if (this.hover && this.isOpen) this.clickButton();
+      });
     
     this.icon.src = Menu;
     this.icon.style.width = this.iconWidth;
@@ -100,6 +102,12 @@ class Dropdown extends HTMLElement {
       this.open();
     }
     this.list.classList.toggle('open');
+
+    // if (this.hover && this.isOpen) {
+    //   window.removeEventListener('click', this.clickButton());
+    //   window.addEventListener('click', this.clickButton());
+    // }
+
   }
 }
 
