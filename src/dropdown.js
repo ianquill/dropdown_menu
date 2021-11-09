@@ -29,9 +29,6 @@ class Dropdown extends HTMLElement {
     } else if (this.hover) {
       this.interactMode = 'mouseover';
     }
-    this.icon.addEventListener(this.interactMode, () => {
-      console.log("clicked icon");
-    });
     this.button.addEventListener(this.interactMode, () => {
       console.log("clicked");
       this.clickButton();
@@ -97,6 +94,7 @@ class Dropdown extends HTMLElement {
     } else {
       this.open();
     }
+    this.list.classList.toggle('open');
   }
 }
 
